@@ -43,13 +43,13 @@ class TicTacToe
      puts "Where would you like to place your token?"
      input = gets.strip
     index = input_to_index(input)
-     cp = current_player
      if valid_move?(index)
+        cp = current_player
        move(index,cp)
-        display_board
      else
        turn
    end
+   display_board
  end
 
  def turn_count
